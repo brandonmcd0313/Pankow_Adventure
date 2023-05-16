@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using TMPro;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class TileLockable : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class TileLockable : MonoBehaviour
     bool locked = false;
     bool followMouse = false;
     Vector3 offset = new Vector3(); //offset from piece to mouse pos
+    GameObject reciverSpot;
    // public bool permalocked;
 
     void Start()
@@ -30,6 +30,7 @@ public class TileLockable : MonoBehaviour
     {
         if (followMouse)
         {
+            
             if (!Input.GetKey(KeyCode.Mouse0) && followMouse)
             {
                 OnMouseUp();
@@ -60,7 +61,22 @@ public class TileLockable : MonoBehaviour
     {
         
         locked = false;
-
+        if(reciverSpot != null)
+        {
+            reciverSpot.GetComponent<TileReciever>().unlockSpot();
+        }
+        //set this and all its children to highest sorting layer
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+        TextMeshPro[] tmps = GetComponentsInChildren<TextMeshPro>();
+        foreach (TextMeshPro tm in tmps)
+        {
+            tm.sortingOrder = 100;
+        }
+        foreach (SpriteRenderer sprite in sprites)
+        {
+            sprite.sortingOrder = 99;
+        }
+        
         //if has a parent, unparent it
         if (transform.parent != null)
         {
@@ -77,6 +93,17 @@ public class TileLockable : MonoBehaviour
 
     private void OnMouseUp()
     {
+        //set this and all its children to default sorting layer
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+         TextMeshPro[] tmps = GetComponentsInChildren<TextMeshPro>();
+        foreach (TextMeshPro tm in tmps)
+        {
+            tm.sortingOrder = 4;
+        }
+        foreach (SpriteRenderer sprite in sprites)
+        {
+            sprite.sortingOrder = 4;
+        }
         //click to nearest valid position, don't follow mouse
         followMouse = false;
         //lock to other game piece
@@ -115,15 +142,25 @@ public class TileLockable : MonoBehaviour
         {
             positon = -1; return; 
         }
-        //TODO: add check for if closest is already locked and a thing todo if it not
-        //if there is a piece to lock to, lock to it
+        reciverSpot = closest;
 
+        if (reciverSpot.GetComponent<TileReciever>().locked)
+        {
+            reciverSpot = null;
+            return;
+        }
+        else
+        {
+            reciverSpot.GetComponent<TileReciever>().lockSpot();
+            
         this.transform.position = closest.transform.position;
-        locked = true;
-        //set position to the position of the reciever
-        positon = closest.GetComponent<TileReciever>().getPosition();
-        //make this a child of the other piece
-        this.transform.parent = closest.transform;
+            locked = true;
+            //set position to the position of the reciever
+            positon = closest.GetComponent<TileReciever>().getPosition();
+            //make this a child of the other piece
+            this.transform.parent = closest.transform;
+        }
+
     }
 }
         

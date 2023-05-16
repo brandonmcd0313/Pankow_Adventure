@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DragDropMinis/Algebra.unity
+- path: Assets/DragDropMinis/Early Childhood.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

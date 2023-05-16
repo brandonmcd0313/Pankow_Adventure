@@ -8,12 +8,23 @@ using UnityEngine.XR;
 public class TileReciever : MonoBehaviour
 {
     [SerializeField] int position;
+  public  bool locked = false;
 
     public int getPosition()
     {
         return position;
     }
 
-    
+    public void lockSpot()
+        {
+        locked = true;
+        }
+
+    public void unlockSpot()
+    {
+        locked = false;
+    }
 }
+    
+
         
