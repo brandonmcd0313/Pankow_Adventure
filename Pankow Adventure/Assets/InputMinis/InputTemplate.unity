@@ -344,7 +344,7 @@ MonoBehaviour:
   - 2
   - 2
   promtText: {fileID: 4274535844879790973, guid: f554c86b9d66ccd4da7f08398e7b88a1, type: 3}
-  InfiniteRandomModeForFun: 0
+  InfiniteRandomModeForFun: 1
 --- !u!4 &1958842529
 Transform:
   m_ObjectHideFlags: 0

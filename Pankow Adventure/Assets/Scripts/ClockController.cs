@@ -10,6 +10,7 @@ public class ClockController : MonoBehaviour
     public UnityEvent onTimerEnd;
     private Image timerImage;
     private float currentTime;
+    bool running = false;
 
     private void Start()
     {
@@ -23,15 +24,28 @@ public class ClockController : MonoBehaviour
 
     private void Update()
     {
+        if (!running) return;
         if (currentTime > 0f)
         {
             currentTime -= Time.deltaTime;
-            timerImage.fillAmount = 1 - (currentTime / duration);  
+         
+            timerImage.fillAmount = (currentTime / duration);  
         }
         else
         {
             // Timer has reached zero, invoke the method or action
             onTimerEnd.Invoke();
         }
+    }
+
+    public void ResetTimer()
+    {
+        currentTime = duration;
+        running = false;
+    }
+    public void StartTimer()
+    {
+        running = true;
+        currentTime = duration + 1;
     }
 }
