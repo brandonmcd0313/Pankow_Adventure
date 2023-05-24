@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DragDropMinis/Early Childhood.unity
+- path: Assets/Alegbra.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
