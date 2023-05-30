@@ -11,7 +11,7 @@ public class PeiceDeposit : MonoBehaviour
     
     public Sprite[] peiceSprites;
     public Vector2[] peicePoints;
-  SpriteRenderer sr;
+  SpriteRenderer sr; bool running = true;
   int peiceIndex = 0; bool canMove = true;
    public GameObject particleEffect;
     //timer
@@ -77,6 +77,10 @@ public class PeiceDeposit : MonoBehaviour
 
     public void DepositPeice()
     {
+        if(!running)
+        {
+            return;
+        }
        
         //check if the peice is in the right place with 20% error
         if (Mathf.Abs((transform.position.x - peicePoints[peiceIndex].x) / peicePoints[peiceIndex].x) <= 0.2f &&
@@ -108,11 +112,10 @@ public class PeiceDeposit : MonoBehaviour
             Instantiate(particleEffect, new Vector3(this.transform.position.x, 
                 this.transform.position.y + 1.6f, this.transform.position.z), Quaternion.Euler(-90, 0, 0));
 
-
         }
 
         //check if peices left
-        if (peiceIndex + 1 < peicePoints.Length)
+        if (peiceIndex < peicePoints.Length)
         {
             //move to next peice and reset
             peiceIndex++;
@@ -123,6 +126,7 @@ public class PeiceDeposit : MonoBehaviour
         {
             //end game
             print(score);
+            running = false;
         }
         
     }

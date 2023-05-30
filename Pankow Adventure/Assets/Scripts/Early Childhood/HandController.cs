@@ -73,10 +73,14 @@ public class HandController : MonoBehaviour
 
 
         //if this object has reached the goal position
-        if (Mathf.Abs((transform.position.x - goalPosition.x) / goalPosition.x) <= 0.1f &&
-            Mathf.Abs((transform.position.y - goalPosition.y) / goalPosition.y) <= 0.1f)
-            {
-           
+        float errorMargin = 0.05f; // 5% error margin
+        float xError = Mathf.Abs((transform.position.x - goalPosition.x) / goalPosition.x);
+        float yError = Mathf.Abs((transform.position.y - goalPosition.y) / goalPosition.y);
+
+        if (xError <= errorMargin && yError <= errorMargin)
+
+        {
+
             //increment the index
             index++;
 
