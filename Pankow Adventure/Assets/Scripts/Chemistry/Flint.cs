@@ -58,7 +58,6 @@ public class Flint : MonoBehaviour
             {
                 //play fire lighting sound
                 fire.GetComponent<FireController>().enableFire();
-                Destroy(other);
                 Destroy(this.gameObject);
             }
         }
@@ -68,7 +67,7 @@ public class Flint : MonoBehaviour
     {
         cooling = true;
         //wait 1.5 sec then set cooldown to false
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         cooling = false;
     }
 }

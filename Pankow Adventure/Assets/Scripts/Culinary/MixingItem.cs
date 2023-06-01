@@ -1,14 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MixingItem : MonoBehaviour
 {
     public Sprite mixedSprite;
-    public Vector3 childPos;
-     float radius;
-    float xradius, yradius;
+     float radius; float speed;
+    float xradius, yradius; bool stirring, cooling;
     bool followMouse = false;
     Vector3 offset = new Vector3(); //offset from piece to mouse pos
     
@@ -111,6 +112,59 @@ public class MixingItem : MonoBehaviour
             //add to mixing area
             closest.GetComponent<MixingReciver>().addItem(this.gameObject);
         }
+    }
 
+    IEnumerator stir(float lowSpeed, float highSpeed, float goal)
+    {
+
+        if (stirring)
+        {
+            if (speed < highSpeed * 2)
+            {
+                speed *= 1.25f;
+            }
+            yield break;
+        }
+        if (!cooling)
+        {
+            speed = UnityEngine.Random.Range(lowSpeed, highSpeed);
+        }
+        stirring = true;
+        //rotate object slowly and a random amount for 2 - 3 seconds
+        float time = 0;
+       
+        float rotationZ = transform.rotation.eulerAngles.z; // Store the initial z-axis rotation
+        while (time < goal)
+        {
+            //as time goes on, slow rotation
+            
+            rotationZ += (speed * Time.deltaTime);
+            //speeds up at start, slows at end.
+            time += Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+            print((speed * Time.deltaTime));
+            yield return new WaitForEndOfFrame();
+        }
+        stirring = false;
+        StartCoroutine(cooldown(lowSpeed, highSpeed));
+    }
+
+    IEnumerator cooldown(float lowSpeed, float highSpeed)
+    {
+        //just wait before reassining speed
+        cooling = true;
+        yield return new WaitForSeconds(1f);
+        if (!stirring)
+        {
+
+            speed = UnityEngine.Random.Range(lowSpeed, highSpeed);
+        }
+        cooling = false;
+
+    }
+
+    public void stirObj(float ls, float hs, float g)
+    {
+        StartCoroutine(stir(ls,hs,g));
     }
 }

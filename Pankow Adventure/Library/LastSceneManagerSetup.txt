@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Chemistry.unity
+- path: Assets/Scenes/Culinary.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

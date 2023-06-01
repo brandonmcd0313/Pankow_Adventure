@@ -384,6 +384,8 @@
 "Assets/Scripts/Algebra/ExpressionDropper.cs"
 "Assets/Scripts/Chemistry/FireController.cs"
 "Assets/Scripts/Chemistry/Flint.cs"
+"Assets/Scripts/Chemistry/LargePowder.cs"
+"Assets/Scripts/Chemistry/LittlePowder.cs"
 "Assets/Scripts/Culinary/MixingItem.cs"
 "Assets/Scripts/Culinary/MixingReciver.cs"
 "Assets/Scripts/Dance/InputManager.cs"
