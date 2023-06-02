@@ -358,7 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8cbab4ae8743e4ea48f4064cf04436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preferredPositons: 04000000
+  preferredPositon: 4
+  actionType: right
   positon: -1
 --- !u!1 &93476030
 GameObject:
@@ -636,7 +637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8cbab4ae8743e4ea48f4064cf04436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preferredPositons: 01000000
+  preferredPositon: 1
+  actionType: assign
   positon: -1
 --- !u!1 &315640304
 GameObject:
@@ -648,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315640305}
   - component: {fileID: 315640307}
-  - component: {fileID: 315640306}
+  - component: {fileID: 315640308}
   m_Layer: 0
   m_Name: code_left (1)
   m_TagString: Untagged
@@ -671,21 +673,6 @@ Transform:
   m_Father: {fileID: 669466093}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &315640306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315640304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14adc6295319ea94d99b30d12aa11111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 3
-  locked: 0
-  denySpot: 0
 --- !u!61 &315640307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -696,7 +683,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -712,6 +699,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.2, y: 0.48}
   m_EdgeRadius: 0
+--- !u!114 &315640308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315640304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee6cffd71e747c46907462e84b69e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 3
+  locked: 0
+  denySpot: 0
+  inputType: a
 --- !u!1 &370381983
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8cbab4ae8743e4ea48f4064cf04436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preferredPositons: 02000000
+  preferredPositon: 2
+  actionType: jump
   positon: -1
 --- !u!1 &652466159
 GameObject:
@@ -1507,7 +1511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828111391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.62, y: -2.28, z: 0}
+  m_LocalPosition: {x: -0.5, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1528,9 +1532,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpForce: 450
+  jumpForce: 37.5
   j: {fileID: 0}
   facingRight: 1
+  d:
+    m_PersistentCalls:
+      m_Calls: []
+  a:
+    m_PersistentCalls:
+      m_Calls: []
+  space:
+    m_PersistentCalls:
+      m_Calls: []
+  start:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &828111398
 Rigidbody2D:
   serializedVersion: 4
@@ -1562,7 +1578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1023824661}
   - component: {fileID: 1023824663}
-  - component: {fileID: 1023824662}
+  - component: {fileID: 1023824664}
   m_Layer: 0
   m_Name: code_right (1)
   m_TagString: Untagged
@@ -1585,21 +1601,6 @@ Transform:
   m_Father: {fileID: 669466093}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1023824662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023824660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14adc6295319ea94d99b30d12aa11111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 4
-  locked: 0
-  denySpot: 0
 --- !u!61 &1023824663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1610,7 +1611,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1626,6 +1627,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.13, y: 0.51}
   m_EdgeRadius: 0
+--- !u!114 &1023824664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023824660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee6cffd71e747c46907462e84b69e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 4
+  locked: 0
+  denySpot: 0
+  inputType: d
 --- !u!1 &1224272767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8cbab4ae8743e4ea48f4064cf04436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preferredPositons: 03000000
+  preferredPositon: 3
+  actionType: left
   positon: -1
 --- !u!1 &1919258960
 GameObject:
@@ -2171,7 +2189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919258961}
   - component: {fileID: 1919258963}
-  - component: {fileID: 1919258962}
+  - component: {fileID: 1919258964}
   m_Layer: 0
   m_Name: code_hook (1)
   m_TagString: Untagged
@@ -2194,21 +2212,6 @@ Transform:
   m_Father: {fileID: 669466093}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1919258962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919258960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14adc6295319ea94d99b30d12aa11111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 1
-  locked: 0
-  denySpot: 0
 --- !u!61 &1919258963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2219,7 +2222,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2235,6 +2238,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.4, y: 0.28}
   m_EdgeRadius: 0
+--- !u!114 &1919258964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919258960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee6cffd71e747c46907462e84b69e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 1
+  locked: 0
+  denySpot: 0
+  inputType: start
 --- !u!1 &1919948447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121114276}
   - component: {fileID: 2121114278}
-  - component: {fileID: 2121114277}
+  - component: {fileID: 2121114279}
   m_Layer: 0
   m_Name: code_jump (1)
   m_TagString: Untagged
@@ -2583,21 +2602,6 @@ Transform:
   m_Father: {fileID: 669466093}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2121114277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121114275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14adc6295319ea94d99b30d12aa11111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 2
-  locked: 0
-  denySpot: 0
 --- !u!61 &2121114278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2608,7 +2612,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2624,6 +2628,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.57, y: 0.36}
   m_EdgeRadius: 0
+--- !u!114 &2121114279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121114275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee6cffd71e747c46907462e84b69e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 2
+  locked: 0
+  denySpot: 0
+  inputType: space
 --- !u!1 &2140495138
 GameObject:
   m_ObjectHideFlags: 0

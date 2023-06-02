@@ -7,12 +7,14 @@ public class NewTile : MonoBehaviour
 {
 
     //this tile can lock into recieve=ing tiles for drag and place levels
-    public int[] preferredPositons;
+    public int preferredPositon;
+    [Tooltip("left,right,assign,jump")]
+    public string actionType;
     public int positon = -1;
     float xradius, yradius; float radius;
     bool locked = false;
     bool followMouse = false;
-    Vector3 offset = new Vector3(); //offset from piece to mouse pos
+    Vector3 offset;
     GameObject reciverSpot;
     // public bool permalocked;
 
@@ -60,11 +62,12 @@ public class NewTile : MonoBehaviour
 
     private void OnMouseDown()
     {
-
+        //set sorting layer to 3
+        this.GetComponent<SpriteRenderer>().sortingOrder = 3;
         locked = false;
         if (reciverSpot != null)
         {
-            reciverSpot.GetComponent<TileReciever>().unlockSpot();
+            reciverSpot.GetComponent<NewReciver>().unlockSpot();
         }
 
         //if has a parent, unparent it
@@ -105,7 +108,7 @@ public class NewTile : MonoBehaviour
         float closestDist = 1000;
         foreach (Collider2D col in colliders)
         {
-            if (col.gameObject != this.gameObject && col.gameObject.GetComponent<TileReciever>() != null)
+            if (col.gameObject != this.gameObject && col.gameObject.GetComponent<NewReciver>() != null)
             {
                 float dist = Vector3.Distance(transform.position, col.transform.position);
                 if (dist < closestDist)
@@ -131,13 +134,13 @@ public class NewTile : MonoBehaviour
         //if there is a closest collider, lock to it
         reciverSpot = closest;
 
-        if (reciverSpot.GetComponent<TileReciever>().locked)
+        if (reciverSpot.GetComponent<NewReciver>().locked)
         {
             reciverSpot = null;
             return;
         }
         //check if this object is denied to be here
-        else if (reciverSpot.GetComponent<TileReciever>().denySpot == preferredPositons[0])
+        else if (reciverSpot.GetComponent<NewReciver>().denySpot == preferredPositon)
         {
             print("denied");
             reciverSpot = null;
@@ -147,12 +150,12 @@ public class NewTile : MonoBehaviour
         {
             //set sorting layer to 3
             this.GetComponent<SpriteRenderer>().sortingOrder = 3;
-            reciverSpot.GetComponent<TileReciever>().lockSpot();
+            reciverSpot.GetComponent< NewReciver>().lockSpot(actionType);
 
             this.transform.position = closest.transform.position;
             locked = true;
             //set position to the position of the reciever
-            positon = closest.GetComponent<TileReciever>().getPosition();
+            positon = closest.GetComponent<NewReciver>().getPosition();
             //make this a child of the other piece
             this.transform.parent = closest.transform;
             

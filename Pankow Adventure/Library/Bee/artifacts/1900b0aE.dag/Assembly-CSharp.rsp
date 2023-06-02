@@ -403,6 +403,7 @@
 "Assets/Scripts/Programming/BackgroundController.cs"
 "Assets/Scripts/Programming/CameraControllerB.cs"
 "Assets/Scripts/Programming/GameController.cs"
+"Assets/Scripts/Programming/NewReciver.cs"
 "Assets/Scripts/Programming/NewTile.cs"
 "Assets/Scripts/Programming/PlayerControllerB.cs"
 "Assets/Scripts/Theatre/TextInput.cs"
