@@ -137,8 +137,7 @@ public class MixingItem : MonoBehaviour
         while (time < goal)
         {
             //as time goes on, slow rotation
-            
-            rotationZ += (speed * Time.deltaTime);
+            rotationZ += (speed * Time.deltaTime * (1- (time/goal)));
             //speeds up at start, slows at end.
             time += Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, rotationZ);

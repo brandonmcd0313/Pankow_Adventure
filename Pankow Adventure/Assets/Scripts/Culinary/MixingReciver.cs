@@ -37,7 +37,7 @@ public class MixingReciver : MonoBehaviour
 
     public void stirObj()
     {
-        float goal = UnityEngine.Random.Range(0f, 1f);
+        float goal = UnityEngine.Random.Range(0.5f, 1.2f);
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<MixingItem>().stirObj(lowSpeed,highSpeed, goal);

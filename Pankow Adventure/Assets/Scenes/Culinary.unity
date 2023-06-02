@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowSpeed: 100
-  highSpeed: 300
+  highSpeed: 500
 --- !u!58 &203076027
 CircleCollider2D:
   m_ObjectHideFlags: 0
