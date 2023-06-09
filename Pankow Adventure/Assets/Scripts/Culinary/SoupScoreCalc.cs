@@ -23,7 +23,36 @@ public class SoupScoreCalc : MonoBehaviour
             }
         }
 
-       float  finalscore = score * modifier;
+        float finalscore = score * modifier;
+
+        string endMsg = "*smacks lips* that soup was... /n";
+        //based on score add descriptor
+        if (finalscore < 0)
+        {
+            endMsg += "BLOODY DISGUSTING! GET OUT OFF THIS CLASSROOM!";
+        }
+        else if (finalscore < 20)
+        {
+            endMsg += "FLAVOURLESS FILTH. DISAPOINTING!";
+        }
+        else if (finalscore <= 40)
+        {
+            endMsg += "BLAND AND UNORIGINAL!";
+        }
+        else if (finalscore < 60)
+        {
+            endMsg += "uneventful.";
+        }
+        else if (finalscore <= 90)
+        {
+            endMsg += "Nothing to write home about, yet not the worst today.";
+        }
+        else
+        {
+            endMsg += "DELIGHTFUL! BEST SOUP I'VE EVER HAD!";
+        }
+        endMsg += "/nA well deserved GRADE%";
+        
         //make sure score is between 0 and 100
         if (finalscore > 100)
         {
@@ -33,6 +62,10 @@ public class SoupScoreCalc : MonoBehaviour
         {
             finalscore = 0;
         }
-        end.GetComponent<EndingGame>().score = finalscore;
+        end.GetComponent<EndingGame>().grade = (int)finalscore;
+        end.GetComponent<EndingGame>().intro = endMsg;
+
+        end.GetComponent<EndingGame>().EndGame();
+
     }
 }

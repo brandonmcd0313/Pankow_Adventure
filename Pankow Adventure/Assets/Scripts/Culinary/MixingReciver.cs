@@ -9,7 +9,7 @@ public class MixingReciver : MonoBehaviour
     public float lowSpeed;
     public float highSpeed;
     float speed; int layer = 2;
-    AudioSource aud; public AudioClip plopSound;
+    AudioSource aud; public AudioClip plopSound , stirr;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +64,7 @@ public class MixingReciver : MonoBehaviour
                 SoupScoreCalc.score += 10;
                 break;
             case "rat":
-                SoupScoreCalc.score -= 100;
+                SoupScoreCalc.score -= 150;
                 break;
             case "whipped cream":
                 SoupScoreCalc.score -= 15;
@@ -72,11 +72,12 @@ public class MixingReciver : MonoBehaviour
                 
         }
 
-
+        
     }
 
     public void stirObj()
     {
+        aud.PlayOneShot(stirr);
         SoupScoreCalc.stirCount++;
         float goal = UnityEngine.Random.Range(0.5f, 1.2f);
         for (int i = 0; i < transform.childCount; i++)
