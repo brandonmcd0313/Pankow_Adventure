@@ -49,3 +49,6 @@ TagManager:
   - name: UI
     uniqueID: 1496941295
     locked: 0
+  - name: Cover
+    uniqueID: 3931001101
+    locked: 0

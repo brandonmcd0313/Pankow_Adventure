@@ -7,9 +7,11 @@ public class Flint : MonoBehaviour
     bool following = false;
     Vector3 offset; int attempts, maxAttempts;
    public GameObject fire; bool cooling = false;
+    AudioSource aud; public AudioClip flint;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         //set max attempts to num between 2 and 7
         maxAttempts = Random.Range(2, 7);
         //lock cursor on screen 
@@ -52,7 +54,7 @@ public class Flint : MonoBehaviour
         {
             StartCoroutine(cooldown());
             //play sound
-            print("HSSSSS");
+            aud.PlayOneShot(flint);
             attempts++;
             if(attempts == maxAttempts)
             {

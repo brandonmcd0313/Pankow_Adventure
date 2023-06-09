@@ -7,7 +7,9 @@ public class FireController : MonoBehaviour
     Animator anim;
     public RuntimeAnimatorController normalFire;
     public RuntimeAnimatorController WhiteFire;
-    SpriteRenderer sr;
+    SpriteRenderer sr; string active;
+    AudioSource aud; public AudioClip fire;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +18,18 @@ public class FireController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         anim.runtimeAnimatorController = normalFire;
+        active = "normal";
+        aud = this.GetComponent<AudioSource>();
         //unrender object
         disableFire();
     }
 
     public void enableFire()
     {
+        aud.PlayOneShot(fire);
         //set to red and enable render
         anim.runtimeAnimatorController = normalFire;
+        active = "normal";
         sr.enabled = true;
     }
     
@@ -33,8 +39,14 @@ public class FireController : MonoBehaviour
        sr.enabled = false;
     }
 
+    public string getAnimatorType()
+    {
+        return active;
+    }
+
     public void colorFire(Color c)
     {
+        aud.PlayOneShot(fire);
         print("color fire");
         if (!sr.enabled) return;
         //if g is negative in c then burn out fire
@@ -46,7 +58,7 @@ public class FireController : MonoBehaviour
         if (anim.runtimeAnimatorController != WhiteFire)
         {
             //first time
-
+            active = "white";
             anim.runtimeAnimatorController = WhiteFire;
             StartCoroutine(fadeColor(c));
         }

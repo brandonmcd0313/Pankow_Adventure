@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class Catcher : MonoBehaviour
 {
+    AudioSource aud;
+    public AudioClip pos, neg;
     public int score = 0;
     public float moveSpeed;
-
+    GameObject end;
     public float xMin, xMax;
     TextMeshPro tm;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
+        end = GameObject.Find("EndGame");
         tm = this.transform.GetChild(0).GetComponent<TextMeshPro>();
     }
 
     // Update is called once per frame
-    void Update()
+     void Update()
     {
         tm.text = "Score: " + score.ToString();
-
+        end.GetComponent<EndingGame>().score = score;
         //left and right movement
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -54,9 +58,11 @@ public class Catcher : MonoBehaviour
                 //add 1 to score
                 score++;
                 StartCoroutine(feedbackText(Color.green));
+                aud.PlayOneShot(pos);
             }
             else
             {
+                aud.PlayOneShot(neg);
                 //50% chance to decrease score
                 if (UnityEngine.Random.Range(0f, 1f) < 0.5f)
                 {

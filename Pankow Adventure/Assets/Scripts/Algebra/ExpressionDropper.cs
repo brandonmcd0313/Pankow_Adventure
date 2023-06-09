@@ -5,14 +5,17 @@ using System;
 
 public class ExpressionDropper : MonoBehaviour
 {
-  
+    GameObject end;
     public GameObject dropPrefab;
     public BoxCollider2D spawnZone;
     public float spawnProb, spawnTime, gameTime, dropSpeed, dropVariablitiy;
    public  int goodDrops = 0;
+
+ 
     // Start is called before the first frame update
     void Start()
     {
+        end = GameObject.Find("EndGame");
         StartCoroutine(gameplay());
     }
 
@@ -28,15 +31,17 @@ public class ExpressionDropper : MonoBehaviour
         float time = 0;
         while (gameTime > time)
         {
-            print(time + " vs " + gameTime);
             //attempt to spawn
             if (UnityEngine.Random.Range(0, 1) < spawnProb)
             {
                 //spawn
                 GameObject drop = Instantiate(dropPrefab);
-                if(drop.GetComponent<DropItem>().rational)
+                yield return new WaitForEndOfFrame();
+                if (drop.GetComponent<DropItem>().rational)
                 {
                     goodDrops++;
+                    end.GetComponent<EndingGame>().possible = goodDrops;
+                    print(end.GetComponent<EndingGame>().possible);
                 }
                 drop.transform.position = new Vector2(UnityEngine.Random.Range(spawnZone.bounds.min.x, spawnZone.bounds.max.x), spawnZone.bounds.max.y);
                 drop.GetComponent<Rigidbody2D>().gravityScale = dropSpeed * UnityEngine.Random.Range(1-dropVariablitiy, 1 + dropVariablitiy);
@@ -51,14 +56,35 @@ public class ExpressionDropper : MonoBehaviour
                 
             }
             //at 10 sec increase drop speed
-            if (time > 10 && !time10)
+            if (time < 10 && !time10)
             {
-                dropSpeed *= 1.30f;
+                dropSpeed *= 1.80f;
                 time10 = true;
             }
 
             time += Time.deltaTime;
             yield return new WaitForEndOfFrame(); 
         }
+        //calculate score
+        int score = (int)end.GetComponent<EndingGame>().score;
+        int possible = (int)(end.GetComponent<EndingGame>().possible * 0.9f);
+
+        float normalizedScore = Mathf.Clamp01((float)score / possible);
+        float gradePercentage = Mathf.Sqrt(normalizedScore) * 100;
+
+        int grade = Mathf.RoundToInt(gradePercentage);
+        if (grade > 100)
+        {
+            //recalc no curve
+             score = (int)end.GetComponent<EndingGame>().score;
+            possible = (int)(end.GetComponent<EndingGame>().possible);
+            gradePercentage = Mathf.Clamp01((float)score / possible);
+            grade = Mathf.RoundToInt(gradePercentage * 100);
+        }
+
+        EndingGame endingGame = end.GetComponent<EndingGame>();
+        endingGame.grade = grade;
+        endingGame.EndGame();
+
     }
 }

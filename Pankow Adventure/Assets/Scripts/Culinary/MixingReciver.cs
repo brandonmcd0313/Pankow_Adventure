@@ -9,12 +9,22 @@ public class MixingReciver : MonoBehaviour
     public float lowSpeed;
     public float highSpeed;
     float speed; int layer = 2;
+    AudioSource aud; public AudioClip plopSound;
+    // Start is called before the first frame update
+    void Start()
+    {
+        stirring = false;
+        cooling = false;
+        aud = GetComponent<AudioSource>();
+    }
     public void addItem(GameObject go)
     {
         if (go.GetComponent<MixingItem>() == null)
         {
             return;
         }
+        //play sound
+        aud.PlayOneShot(plopSound);
         //child this object
         go.transform.parent = transform;
         //set to child pos
@@ -32,11 +42,42 @@ public class MixingReciver : MonoBehaviour
             GetComponent<SpriteRenderer>().sortingOrder = layer;
             layer++;
         }
+        SoupScoreCalc.itemCount++;
+        //switch case for the name to determine score stuff
+        //based on a 100 point scale
+        switch (go.name)
+        {
+            
+            case "carrot":
+                SoupScoreCalc.score += 10;
+                break;
+            case "cheese":
+                SoupScoreCalc.score -= 30;
+                break;
+            case "chicken":
+                SoupScoreCalc.score += 40;
+                break;
+            case "noodles":
+                SoupScoreCalc.score += 40;
+                break;
+            case "peas":
+                SoupScoreCalc.score += 10;
+                break;
+            case "rat":
+                SoupScoreCalc.score -= 100;
+                break;
+            case "whipped cream":
+                SoupScoreCalc.score -= 15;
+                break;
+                
+        }
+
 
     }
 
     public void stirObj()
     {
+        SoupScoreCalc.stirCount++;
         float goal = UnityEngine.Random.Range(0.5f, 1.2f);
         for (int i = 0; i < transform.childCount; i++)
         {
