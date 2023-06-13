@@ -6,8 +6,10 @@ using Unity.VisualScripting;
 
 public class InputManager : MonoBehaviour
 {
-    public string[] prompts;
-    public float[] times;
+    public float minTime, maxTime, gameRuntime;
+    public AudioSource aud;
+    // public string[] prompts;
+    //public float[] times;
     public GameObject promtText;
     float time = 0f;  //0.005f;
     GameObject lowest;
@@ -103,25 +105,45 @@ public class InputManager : MonoBehaviour
     }
     IEnumerator gamePlay()
     {
-        GameObject start = Instantiate(promtText, new Vector3(0, 6, 0), Quaternion.identity);
-        start.GetComponent<TextMeshPro>().text = "Press the keys to the beat!";
-        start.GetComponent<TextMeshPro>().enableWordWrapping = false;
-        start.GetComponent<TextMeshPro>().fontSize = 14;
-        //move down to 0 0
-        for (int i = 0; i < 600; i++)
-        {
-            yield return new WaitForSeconds(time);
-           
-            start.transform.position -= new Vector3(0, 0.01f, 0);
+        GameObject start = Instantiate(promtText, new Vector3(0, 0, 0), Quaternion.identity);
 
-        }
-     yield return new WaitForSeconds(2);
+        start.transform.GetChild(0).localScale = new Vector3(9.55f, 1.07f, 0);
+        start.GetComponent<TextMeshPro>().alignment = TextAlignmentOptions.Center;
+        start.GetComponent<TextMeshPro>().text = "Press the keys when they enter the square!";
+        start.GetComponent<TextMeshPro>().enableWordWrapping = false;
+        start.GetComponent<TextMeshPro>().fontSize = 7.7f;
+        //move down to 0 0
+        yield return new WaitForSeconds(2f);
+        //start the audio siurce
+        aud.Play();
+        yield return new WaitForSeconds(2f);
         Destroy(start);
-        for (int i = 0; i < prompts.Length; i++)
+        time = 0;
+        while (time < gameRuntime)
         {
+            time += Time.deltaTime;
             KeyCode p = KeyCode.Alpha0;
-            float t = times[i];
-            char prompt = prompts[i].ToUpper()[0];
+            float t = Random.Range(minTime, maxTime);
+            //random letter U R D L
+            char prompt = ' ';
+            switch (Random.Range(0, 4))
+            {
+                case 0:
+                    prompt = 'U';
+                    break;
+                case 1:
+                    prompt = 'R';
+                    break;
+                case 2:
+                    prompt = 'D';
+                    break;
+                case 3:
+                    prompt = 'L';
+                    break;
+                default:
+                    Debug.Log("Invalid prompt: " + prompt);
+                    break;
+            }
             GameObject current = Instantiate(promtText, new Vector3(0, 6, 0), Quaternion.identity);
 
             float zRotation = 0.0f;
@@ -153,13 +175,13 @@ public class InputManager : MonoBehaviour
             //
             StartCoroutine(prompter(t, current, p));
             yield return new WaitForSeconds(t);
+            time += t;
            
         }
     }
 
     IEnumerator prompter(float t, GameObject current, KeyCode p)
     {
-        active.Add(current);
         bool hit = false;
         //t = seconds to move down 6 units
         float distance = 12f;
@@ -171,73 +193,26 @@ public class InputManager : MonoBehaviour
             if (current != null)
             { current.transform.position -= new Vector3(0, distancePerSecond * Time.deltaTime, 0); }
       
-            if((Mathf.Abs(elapsedTime - t) / t) <= 1.3f && elapsedTime > t && !hit)
-            {
-                hit = true;
-                // Set current to red
-                current.GetComponent<TextMeshPro>().color = Color.red;
-                // Point stuff
-            }
-            if (Input.GetKey(p) && !hit && (active.IndexOf(current) == closestToMiddle()))
+           
+            if (Input.GetKey(p) && !hit && current.transform.position.y < 2f && current.transform.position.y > -2f)
             {
                 print("got" + current);
-                active.Remove(current);
-                float currentTime = elapsedTime;
-                float onTimeThreshold = 0.25f;
-
-                if ((Mathf.Abs(currentTime - t)/t) <= onTimeThreshold)
-                {
-                    hit = true;
+                hit = true;
                     // Set to green
                     current.GetComponent<TextMeshPro>().color = Color.green;
-                    // Point stuff
-                }
-                else
-                {
-                    hit = true;
-                    // Set current to red
-                    current.GetComponent<TextMeshPro>().color = Color.red;
-                    // Point stuff
-                }
 
             }
 
-        }
-        //if this object is still in active arraylist remove it and everything before it
-        if(active.IndexOf(current) != -1)
-        {
-            int index = active.IndexOf(current);
-            for (int i = index; i >= 0; i--)
+            //if below -1 set to red
+            if (current.transform.position.y < -2f && !hit)
             {
-                active.RemoveAt(i);
+                hit = true;
+                // Set to red
+                current.GetComponent<TextMeshPro>().color = Color.red;
             }
+
         }
         Destroy(current);
         yield return null;
-    }
-    
-  int closestToMiddle()
-    {
-        int index = -1; 
-        float closestDistance = 5 ;
-
-        for (int i = 0; i < active.Count; i++)
-        {
-            Vector3 objectPosition = ((GameObject)active[i]).transform.position;
-
-            // Check if the object is within the y-axis range (-5 to 5)
-            if (objectPosition.y > -5 && objectPosition.y < 5)
-            {
-                float distance = Vector3.Distance(Vector3.zero, objectPosition);
-
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    index = i;
-                }
-            }
-        }
-
-        return index;
     }
 }

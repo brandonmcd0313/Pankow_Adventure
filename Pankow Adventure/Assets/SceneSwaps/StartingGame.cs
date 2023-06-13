@@ -10,6 +10,7 @@ public class StartingGame : MonoBehaviour
     TextMeshPro introText;
     public string intro;
     public AudioSource aud;
+    public bool autoStartAudio = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,8 @@ public class StartingGame : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Time.timeScale = 1;
-            if (aud != null)
+            if (aud != null && autoStartAudio)
             {
-
                 aud.Play();
             }
             Destroy(paper);
