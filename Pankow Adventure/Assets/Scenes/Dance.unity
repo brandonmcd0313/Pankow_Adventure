@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: aud
       value: 
       objectReference: {fileID: 1509037265}
+    - target: {fileID: 2087418388760175391, guid: cd8041705fe87a14d8a9fa80a3a29487, type: 3}
+      propertyPath: intro
+      value: You busted SCORE moves out of a possible POS moves!/nThat earns you
+        a grade of GRADE%
+      objectReference: {fileID: 0}
     - target: {fileID: 7673058297608951804, guid: cd8041705fe87a14d8a9fa80a3a29487, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -323,6 +328,13 @@ PrefabInstance:
       propertyPath: aud
       value: 
       objectReference: {fileID: 1509037265}
+    - target: {fileID: 6839844487988006595, guid: b462edceeef0d1f49b45f0a4cc119cad, type: 3}
+      propertyPath: intro
+      value: Welcome to Dance!/nMoves will lower from the top of the screen as arrows,
+        hit the indicated arrow key when the move is in the square to bust that move.
+        The move will turn green if you were on beat and red if not. Try to get as
+        many moves on beat to get the best possible score!
+      objectReference: {fileID: 0}
     - target: {fileID: 6839844487988006595, guid: b462edceeef0d1f49b45f0a4cc119cad, type: 3}
       propertyPath: autoStartAudio
       value: 0

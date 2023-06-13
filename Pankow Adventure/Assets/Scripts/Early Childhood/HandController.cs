@@ -21,6 +21,8 @@ public class HandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale != 1)
+        { return; }
         print(goalPosition);
         //check if the child has a null sprite and if 13 < x < 14
         if (transform.GetChild(0).GetComponent<SpriteRenderer>().sprite == null && transform.position.x > 13 && transform.position.x < 14)

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class TileLockable : MonoBehaviour
 {
-
+    GameObject end;
     //this tile can lock into recieve=ing tiles for drag and place levels
+   AudioSource aud;
+    public AudioClip click;
     public int[] preferredPositons;
     public int positon = -1;
-    float radius;
+    float radius; 
     float xradius, yradius;
     bool locked = false;
     bool followMouse = false;
@@ -19,6 +21,10 @@ public class TileLockable : MonoBehaviour
 
     void Start()
     {
+        //aud is on main camera
+        aud = Camera.main.GetComponent<AudioSource>();
+        end = GameObject.Find("EndGame");
+        end.GetComponent<EndingGame>().possible = 6;
         Cursor.lockState = CursorLockMode.Confined;
         //if x and y unset set them to radius
         //set radius to half  scale of the object
@@ -139,8 +145,8 @@ public class TileLockable : MonoBehaviour
         else
         {
             reciverSpot.GetComponent<TileReciever>().lockSpot();
-            
-        this.transform.position = closest.transform.position;
+            aud.PlayOneShot(click);
+            this.transform.position = closest.transform.position;
             locked = true;
             //set position to the position of the reciever
             positon = closest.GetComponent<TileReciever>().getPosition();
@@ -148,6 +154,39 @@ public class TileLockable : MonoBehaviour
             this.transform.parent = closest.transform;
         }
 
+        //check every object to see if they are all locked
+        GameObject[] allObjects = GameObject.FindGameObjectsWithTag("TileR");
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.GetComponent<TileReciever>().locked == false)
+            {
+                return;
+            }
+        }
+        //if made it here game is over!
+        foreach (GameObject obj in allObjects)
+        {
+            //get the score
+            foreach (int pos in obj.transform.GetChild(0).GetComponent<TileLockable>().preferredPositons)
+            {
+                if (pos == obj.GetComponent<TileReciever>().getPosition())
+                {
+                    end.GetComponent<EndingGame>().score++;
+                }
+            }
+
+        }
+        if (end.GetComponent<EndingGame>().score != end.GetComponent<EndingGame>().possible)
+        {
+            end.GetComponent<EndingGame>().grade = 0;
+            end.GetComponent<EndingGame>().intro = "The PC doesn't work, how did you mess that up./nYou get GRADE%";
+        }
+        else
+        {
+            end.GetComponent<EndingGame>().grade = 100;
+            end.GetComponent<EndingGame>().intro = "Nice Job! The PC works!/n You get GRADE%";
+        }
+         end.GetComponent<EndingGame>().EndGame();
     }
 }
         

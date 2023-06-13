@@ -6,6 +6,9 @@ TagManager:
   tags:
   - CameraZone
   - Platform
+  - Prompt
+  - Tile
+  - TileR
   layers:
   - Default
   - TransparentFX

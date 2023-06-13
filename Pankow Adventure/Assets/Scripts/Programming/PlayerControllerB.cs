@@ -12,12 +12,13 @@ public class PlayerControllerB : MonoBehaviour
     bool canJump = false, setJump = false;
     public GameObject j; 
     public bool facingRight = true; bool dead = false;
-
+    GameObject end; bool canMove = true;
     public UnityEvent d, a, space, start;
 
     // Use this for initialization
     void Start()
     {
+        end = GameObject.Find("EndGame");
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -27,6 +28,8 @@ public class PlayerControllerB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!canMove)
+        { return; }
         if(transform.position.y < -13f && !dead)
         {
             StartCoroutine(death());
@@ -284,7 +287,22 @@ public class PlayerControllerB : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
 
-       
+        end.GetComponent<EndingGame>().score++;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+       if(col.gameObject.name == "flag")
+       {
+            canMove = false;
+            //end of game
+            end.GetComponent<EndingGame>().grade = 100 - (end.GetComponent<EndingGame>().score * 10);
+            if(end.GetComponent<EndingGame>().grade < 0)
+            {
+                end.GetComponent<EndingGame>().grade = 0;
+            }
+            end.GetComponent<EndingGame>().EndGame();
+        }
     }
  }
 

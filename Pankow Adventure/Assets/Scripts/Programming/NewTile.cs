@@ -9,6 +9,8 @@ public class NewTile : MonoBehaviour
     //this tile can lock into recieve=ing tiles for drag and place levels
     public int preferredPositon;
     [Tooltip("left,right,assign,jump")]
+    AudioSource aud;
+    public AudioClip click;
     public string actionType;
     public int positon = -1;
     float xradius, yradius; float radius;
@@ -20,6 +22,7 @@ public class NewTile : MonoBehaviour
 
     void Start()
     {
+        aud = Camera.main.GetComponent<AudioSource>();
         this.GetComponent<SpriteRenderer>().sortingOrder = 0;
         Cursor.lockState = CursorLockMode.Confined;
         //if x and y unset set them to radius
@@ -148,6 +151,7 @@ public class NewTile : MonoBehaviour
         }
         else
         {
+            aud.PlayOneShot(click);
             //set sorting layer to 3
             this.GetComponent<SpriteRenderer>().sortingOrder = 3;
             reciverSpot.GetComponent< NewReciver>().lockSpot(actionType);

@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class PeiceDeposit : MonoBehaviour
 {
-    int score = 0;
-    
+    GameObject end;
+    AudioSource aud; 
+    public AudioClip pos, neg;
     public Sprite[] peiceSprites;
     public Vector2[] peicePoints;
   SpriteRenderer sr; bool running = true;
@@ -23,7 +24,8 @@ public class PeiceDeposit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        end = GameObject.Find("EndGame");
+        aud = this.GetComponent<AudioSource>();
         //this script is on the hand so get the renderer of first child
         sr = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
         //shuffle arrays 
@@ -46,6 +48,8 @@ public class PeiceDeposit : MonoBehaviour
         timerImage.fillOrigin = (int)Image.Origin360.Top; // Set the fill origin to the top
 
         currentTime = duration;
+
+        end.GetComponent<EndingGame>().possible = 7;
     }
 
     // Update is called once per frame
@@ -98,9 +102,9 @@ public class PeiceDeposit : MonoBehaviour
 
             //add to score 
 
-            score++;
+            end.GetComponent<EndingGame>().score++;
 
-
+            aud.PlayOneShot(pos);
         }
         else
         {
@@ -112,10 +116,11 @@ public class PeiceDeposit : MonoBehaviour
             Instantiate(particleEffect, new Vector3(this.transform.position.x, 
                 this.transform.position.y + 1.6f, this.transform.position.z), Quaternion.Euler(-90, 0, 0));
 
+            aud.PlayOneShot(neg);
         }
 
         //check if peices left
-        if (peiceIndex < peicePoints.Length)
+        if (peiceIndex < peicePoints.Length - 1)
         {
             //move to next peice and reset
             peiceIndex++;
@@ -125,16 +130,22 @@ public class PeiceDeposit : MonoBehaviour
         else
         {
             //end game
-            print(score);
+            
             running = false;
+            // 6/7 = 90 5/7 = 80
+            end.GetComponent<EndingGame>().grade = 100 - ((end.GetComponent<EndingGame>().possible - end.GetComponent<EndingGame>().score) * 10);
+            end.GetComponent<EndingGame>().EndGame();
+            
         }
         
     }
 
     public void NewPeice()
     {
-        
+
         sr.sprite = peiceSprites[peiceIndex];
+        //if index out of bounds
+        
         canMove = true;
     }
 }
