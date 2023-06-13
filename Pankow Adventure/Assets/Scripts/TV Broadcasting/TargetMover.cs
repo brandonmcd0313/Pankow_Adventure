@@ -7,10 +7,11 @@ public class TargetMover : MonoBehaviour
     //move the target between points and sizes
     [Tooltip("Z pos is the size of the object")]
     public Vector3[] points;
-    public float gameTime;
+    public float gameTime; GameObject end;
     public float speed; 
     void Start()
     {
+        end = GameObject.Find("EndGame");
         StartCoroutine(move());
     }
 
@@ -20,8 +21,10 @@ public class TargetMover : MonoBehaviour
         //move between points and sizes
         while (time < gameTime)
         {
+            
             for (int i = 0; i < points.Length; i++)
             {
+                print(time);
                 //init and final values
                 Vector2 goalPosition = points[i];
                 float goalSize = points[i].z;
@@ -41,8 +44,9 @@ public class TargetMover : MonoBehaviour
                     transform.position = Vector2.Lerp(startPosition, goalPosition, t);
                     transform.localScale = Vector3.Lerp(startScale, new Vector3(goalSize, goalSize, 1), t);
                     yield return new WaitForEndOfFrame();
-                    elapsedTime += Time.deltaTime;
                     time += Time.deltaTime;
+                    elapsedTime += Time.deltaTime;
+                   
                 }
 
                 transform.position = goalPosition; //just to be sure
@@ -57,9 +61,12 @@ public class TargetMover : MonoBehaviour
                 int randomIndex = UnityEngine.Random.Range(i, points.Length);
                 points[i] = points[randomIndex];
                 points[randomIndex] = temp;
+           
             }
         }
+        end.GetComponent<EndingGame>().EndGame();
     }
+    
 
 
 }
