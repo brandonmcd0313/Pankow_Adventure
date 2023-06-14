@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static string program;
+
+    
     Rigidbody2D rb2d; //reference to Rigidbody2D component
     Animator anim; //reference to Animator component
     SpriteRenderer sr; Sprite idleUp, idleDown, idleSide;

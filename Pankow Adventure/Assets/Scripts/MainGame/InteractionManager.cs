@@ -2,18 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractionManager : MonoBehaviour
 {
     //this script is placed on a gameobject with a box collider
     //when the box collider is hit the next SET of interaction messages will run
-
-    Collider2D col;
+    public string program = "none"; public int scene;
+    Collider2D col; bool visted = false;
     [SerializeField] string[] messages1;
-    [SerializeField] string[] messages2;
-    [SerializeField] string[] messages3;
     [SerializeField] string[] idleMessages;
-    string[][] messageSet = new string[3][];
+    string[][] messageSet = new string[1][];
     public  int messageIndex = 0;
     bool isPrinting;
     // Start is called before the first frame update
@@ -28,13 +27,9 @@ public class InteractionManager : MonoBehaviour
         {
             messageSet[0] = messages1;
         }
-        if (messages2.Length > 0)
+        else
         {
-            messageSet[1] = messages2;
-        }
-        if (messages3.Length > 0)
-        {
-            messageSet[2] = messages3;
+            messageSet[0] = idleMessages;
         }
 
     }
@@ -48,7 +43,20 @@ public class InteractionManager : MonoBehaviour
             //if no coroutine is running
             if (!isPrinting)
             {
-                StartCoroutine(Interaction());
+                if (program == PlayerController.program && !visted)
+                {
+                    visted = true;
+                    messages1[0] = "You have already taken this class today.";
+                    messages1[1] = "Go to your next class or leave for the day";
+                    SceneManager.LoadScene(scene); 
+                    
+                   
+                }
+                else
+                {
+
+                    StartCoroutine(Interaction());
+                }
             }
         }
     }
@@ -70,6 +78,10 @@ public class InteractionManager : MonoBehaviour
                     
                 }
             }
+
+            //disable text
+            TextBehaviour.disableText();
+            isPrinting = false;
             yield break;
         }
         //go through each index and wait until interacted to print next

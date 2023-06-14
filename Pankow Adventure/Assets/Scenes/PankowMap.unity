@@ -123,6 +123,84 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7770369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7770372}
+  - component: {fileID: 7770371}
+  - component: {fileID: 7770370}
+  m_Layer: 0
+  m_Name: store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7770370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the school store!
+  - It is currently closed, you should buy from Mr Sanborn anyway.
+  messageIndex: 0
+--- !u!61 &7770371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770369}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &7770372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770369}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.44, y: 16.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &13942519
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,16 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the HVAC Room.
+  - You are not taking HVAC.
   messageIndex: 0
 --- !u!61 &13942521
 BoxCollider2D:
@@ -336,16 +410,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Theatre English Classroom.
+  - You are not taking English right now.
+  - If you are taking Theatre go to the acting room.
   messageIndex: 0
 --- !u!61 &43972520
 BoxCollider2D:
@@ -388,6 +459,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &111308823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111308826}
+  - component: {fileID: 111308825}
+  - component: {fileID: 111308824}
+  m_Layer: 0
+  m_Name: door (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &111308824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111308823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is a storage room.
+  - It used to have vending machines but now it doesn't.
+  messageIndex: 0
+--- !u!61 &111308825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111308823}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &111308826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111308823}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 5.4399996, y: 16.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &115084685
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,16 +567,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Computer Lab.
+  - It is mainly used for NWEA testing, ew. Lucky that is not today!
   messageIndex: 0
 --- !u!61 &115084687
 BoxCollider2D:
@@ -500,16 +645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Horticulture Classroom.
+  - You are not taking Horticulture.
   messageIndex: 0
 --- !u!61 &169870002
 BoxCollider2D:
@@ -582,16 +723,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is an expansion classroom.
+  - It is mainly used for storage so you have no reason to be here.
   messageIndex: 0
 --- !u!61 &226877480
 BoxCollider2D:
@@ -664,16 +801,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  program: none
+  scene: 0
   messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  - This is a classroom.
+  - When this game was made this classroom was not being used.
+  - But it will be used...
+  idleMessages:
+  - This room is still unused, maybe someday.
   messageIndex: 0
 --- !u!61 &263343990
 BoxCollider2D:
@@ -715,6 +850,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &302251791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302251794}
+  - component: {fileID: 302251793}
+  - component: {fileID: 302251792}
+  m_Layer: 0
+  m_Name: Theatere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &302251792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302251791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: PPA
+  scene: 9
+  messages1: []
+  idleMessages:
+  - This is the Acting Classroom.
+  - You are not taking any theatre classesTV Broadcast Media .
+  messageIndex: 0
+--- !u!61 &302251793
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302251791}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &302251794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302251791}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 24.58, y: 16.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &312067009
 GameObject:
@@ -823,16 +1036,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  program: none
+  scene: 0
   messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  - This is the Office.
+  - 'You have no reason to be in the office right now. '
+  idleMessages:
+  - You have no reason to be in the Office.
+  - Now get to class, before you do have a reason to be here.
   messageIndex: 0
 --- !u!61 &347833809
 BoxCollider2D:
@@ -875,6 +1086,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &440044012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440044015}
+  - component: {fileID: 440044014}
+  - component: {fileID: 440044013}
+  m_Layer: 0
+  m_Name: TV Broadcast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &440044013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440044012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: CTE
+  scene: 10
+  messages1: []
+  idleMessages:
+  - This is the TV Broadcast Media Classroom.
+  - You are not in TV Broadcast Media.
+  messageIndex: 0
+--- !u!61 &440044014
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440044012}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &440044015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440044012}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 42.45, y: 34.49, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &480733726
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,16 +1194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: MST
+  scene: 8
+  messages1: []
+  idleMessages:
+  - This is the Game Design Classroom.
+  - You are not taking Game Design.
   messageIndex: 0
 --- !u!61 &480733728
 BoxCollider2D:
@@ -949,9 +1234,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480733726}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -9.9, y: 13.95, z: -0.33251354}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -9.9, y: 13.949998, z: -0.33251354}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -994,7 +1279,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1055,6 +1340,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1880324348}
+--- !u!1 &622750272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622750275}
+  - component: {fileID: 622750274}
+  - component: {fileID: 622750273}
+  m_Layer: 0
+  m_Name: sm (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &622750273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622750272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Sports Medicine Classroom.
+  - You are not in Sports Medicine.You are not in
+  messageIndex: 0
+--- !u!61 &622750274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622750272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &622750275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622750272}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.05, y: 25.050003, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &627199517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,16 +1448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: MST
+  scene: 2
+  messages1: []
+  idleMessages:
+  - This is the Alegbra Classroom.
+  - You are not taking Alegbra.
   messageIndex: 0
 --- !u!61 &627199519
 BoxCollider2D:
@@ -1167,16 +1526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Health Occupations Classroom.
+  - You are not taking Health Occupations.
   messageIndex: 0
 --- !u!61 &653586178
 BoxCollider2D:
@@ -1249,16 +1604,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Physics Classroom.
+  - You are not taking Physics.
   messageIndex: 0
 --- !u!61 &675674258
 BoxCollider2D:
@@ -1331,16 +1682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Geometry Classroom.
+  - You are not taking Geometry.
   messageIndex: 0
 --- !u!61 &754468547
 BoxCollider2D:
@@ -1457,16 +1804,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is a closet.
+  - Or maybe more. I don't know.
   messageIndex: 0
 --- !u!61 &799417015
 BoxCollider2D:
@@ -1539,16 +1882,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the entrance to the Counsling Office
+  - 'Your schedule is perfect for you so you have no reason to enter. '
   messageIndex: 0
 --- !u!61 &852539820
 BoxCollider2D:
@@ -1621,16 +1960,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Graphic Arts and Design Classroom.
+  - You are not taking this class.
   messageIndex: 0
 --- !u!61 &890362629
 BoxCollider2D:
@@ -1673,6 +2008,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &928055331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928055334}
+  - component: {fileID: 928055333}
+  - component: {fileID: 928055332}
+  m_Layer: 0
+  m_Name: Early Childhood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &928055332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928055331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: CTE
+  scene: 6
+  messages1: []
+  idleMessages:
+  - This is the Early Childhood Devolpment Classroom.
+  - You are not in Early Childhood Devolpment.
+  messageIndex: 0
+--- !u!61 &928055333
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928055331}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &928055334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928055331}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 20.27, y: 34.49, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &949484089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,16 +2116,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Biology Classroom.
+  - You are not taking Biology.
   messageIndex: 0
 --- !u!61 &949484091
 BoxCollider2D:
@@ -1755,6 +2164,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1003516715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003516718}
+  - component: {fileID: 1003516717}
+  - component: {fileID: 1003516716}
+  m_Layer: 0
+  m_Name: CI (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1003516716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003516715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Cognitively Impaired Classroom.
+  - You are not in the Cognitively Impaired program.
+  messageIndex: 0
+--- !u!61 &1003516717
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003516715}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1003516718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003516715}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 11.78, y: 28.09, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1127522137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,16 +2272,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Calculus Classroom.
+  - You are not taking Calculus.
   messageIndex: 0
 --- !u!61 &1127522139
 BoxCollider2D:
@@ -1837,6 +2320,240 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1128528178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128528181}
+  - component: {fileID: 1128528180}
+  - component: {fileID: 1128528179}
+  m_Layer: 0
+  m_Name: door (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1128528179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128528178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is an addiontal door to the acting room.
+  - It is locked so you should use the other door
+  messageIndex: 0
+--- !u!61 &1128528180
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128528178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1128528181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128528178}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 19.05, y: 16.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1158945197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158945200}
+  - component: {fileID: 1158945199}
+  - component: {fileID: 1158945198}
+  m_Layer: 0
+  m_Name: door (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158945198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158945197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is an addiontal door to the acting room.
+  - It is locked so you should use the other door
+  messageIndex: 0
+--- !u!61 &1158945199
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158945197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1158945200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158945197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.04, y: 18.36, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1184072401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184072404}
+  - component: {fileID: 1184072403}
+  - component: {fileID: 1184072402}
+  m_Layer: 0
+  m_Name: door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1184072402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184072401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is an addiontal door to the acting room.
+  - It is locked so you should use the other door
+  messageIndex: 0
+--- !u!61 &1184072403
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184072401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1184072404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184072401}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 21.36, y: 16.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1190779301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,16 +2584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is an unused classroom.
+  - Maybe someday it will be used again.
   messageIndex: 0
 --- !u!61 &1190779303
 BoxCollider2D:
@@ -1931,7 +2644,7 @@ GameObject:
   - component: {fileID: 1267223147}
   - component: {fileID: 1267223146}
   m_Layer: 0
-  m_Name: HVAC (1)
+  m_Name: Criminal Investigationsgations.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,16 +2662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Criminal Investigations Classroom.
+  - You are not taking Criminal Investigations.
   messageIndex: 0
 --- !u!61 &1267223147
 BoxCollider2D:
@@ -2031,16 +2740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the CAD Classroom.
+  - You are not taking CAD.
   messageIndex: 0
 --- !u!61 &1341568717
 BoxCollider2D:
@@ -2082,6 +2787,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1362326972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362326975}
+  - component: {fileID: 1362326974}
+  - component: {fileID: 1362326973}
+  m_Layer: 0
+  m_Name: sm (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1362326973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362326972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Sports Medicine Classroom.
+  - You are not in Sports Medicine.You are not in
+  messageIndex: 0
+--- !u!61 &1362326974
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362326972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1362326975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362326972}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 9.57, y: 25.050003, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1417016908
 GameObject:
@@ -2173,7 +2956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417016908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 19.2, z: 0}
+  m_LocalPosition: {x: 1.34, y: 22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2726,16 +3509,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Teacher Lounge.
+  - You are not a teacher so you can't go in there.
+  - Unless this is Mr Sanborn playing my game, but you still can't go in there.
   messageIndex: 0
 --- !u!61 &1486478601
 BoxCollider2D:
@@ -2777,6 +3557,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1496782299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496782302}
+  - component: {fileID: 1496782301}
+  - component: {fileID: 1496782300}
+  m_Layer: 0
+  m_Name: CI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1496782300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496782299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Cognitively Impaired Classroom.
+  - You are not in the Cognitively Impaired program.
+  messageIndex: 0
+--- !u!61 &1496782301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496782299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1496782302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496782299}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 9.22, y: 28.09, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1592354820
 GameObject:
@@ -2859,6 +3717,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592354820}
   m_CullTransparentMesh: 1
+--- !u!1 &1595210235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595210238}
+  - component: {fileID: 1595210237}
+  - component: {fileID: 1595210236}
+  m_Layer: 0
+  m_Name: sm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1595210236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595210235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Sports Medicine Classroom.
+  - You are not in Sports Medicine.You are not in
+  messageIndex: 0
+--- !u!61 &1595210237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595210235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1595210238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595210235}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 5.8689985, y: 25.050003, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1597924389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,16 +3825,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: MST
+  scene: 3
+  messages1: []
+  idleMessages:
+  - This is the Chemistry Classroom.
+  - You are not taking Chemistry.
   messageIndex: 0
 --- !u!61 &1597924391
 BoxCollider2D:
@@ -2971,16 +3903,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  program: none
+  scene: 0
   messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  - This is the room attached to the other unused room.
+  - The future use of this room remains mysterious.
+  idleMessages:
+  - Still empty, how mysterious
   messageIndex: 0
 --- !u!61 &1637012427
 BoxCollider2D:
@@ -3117,11 +4046,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  program: none
+  scene: 0
   messages1: []
-  messages2: []
-  messages3: []
   idleMessages: []
   messageIndex: 0
+--- !u!1 &1707907174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707907177}
+  - component: {fileID: 1707907176}
+  - component: {fileID: 1707907175}
+  m_Layer: 0
+  m_Name: Culinary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1707907175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707907174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: CTE
+  scene: 4
+  messages1: []
+  idleMessages:
+  - This is the Culinary Classroom.
+  - You are not in Culinary.
+  messageIndex: 0
+--- !u!61 &1707907176
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707907174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1707907177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707907174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.04, y: 23.92, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711166834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,16 +4159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: MST
+  scene: 7
+  messages1: []
+  idleMessages:
+  - This is the PC Servicing Classroom.
+  - You are not taking PC Servicing.
   messageIndex: 0
 --- !u!61 &1711166836
 BoxCollider2D:
@@ -3234,16 +4237,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Auto Tech Lab.
+  - You are not in auto tech so you have no reason to be here.
   messageIndex: 0
 --- !u!61 &1714876651
 BoxCollider2D:
@@ -3316,16 +4315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Auto Tech Lab.
+  - You are not in auto tech so you have no reason to be here.
   messageIndex: 0
 --- !u!61 &1737746018
 BoxCollider2D:
@@ -3398,16 +4393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Auto Tech Classroom.
+  - You are not taking Auto Tech .
   messageIndex: 0
 --- !u!61 &1873756104
 BoxCollider2D:
@@ -3551,7 +4542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880324348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9578009, y: -3.6222687, z: 0}
+  m_LocalPosition: {x: -3.87, y: -3.05, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3570,7 +4561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4635d34c30abd4d4fabc2b8b64801ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!50 &1880324354
 Rigidbody2D:
   serializedVersion: 4
@@ -3618,6 +4609,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 3}
   m_EdgeRadius: 0
+--- !u!1 &1885369299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885369302}
+  - component: {fileID: 1885369301}
+  - component: {fileID: 1885369300}
+  m_Layer: 0
+  m_Name: Dance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1885369300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885369299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: PPA
+  scene: 5
+  messages1: []
+  idleMessages:
+  - This is the Dance Classroom.
+  - You are not in Dance.
+  messageIndex: 0
+--- !u!61 &1885369301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885369299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1885369302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885369299}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 26.69, y: 34.49, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1892772045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,16 +4717,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages1:
-  - qwerty
-  - uiop
-  messages2:
-  - asdfghj
-  - kl
-  messages3:
-  - 
-  - 
-  idleMessages: []
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is the Auto Tech Lab.
+  - You are not in auto tech so you have no reason to be here.
   messageIndex: 0
 --- !u!61 &1892772047
 BoxCollider2D:
@@ -3700,3 +4765,315 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1917435056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917435059}
+  - component: {fileID: 1917435058}
+  - component: {fileID: 1917435057}
+  m_Layer: 0
+  m_Name: toilet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1917435057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917435056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is a bathroom
+  - what do you want, it's not interesting.
+  messageIndex: 0
+--- !u!61 &1917435058
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917435056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &1917435059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917435056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.04, y: 27.52, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2060330921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060330924}
+  - component: {fileID: 2060330923}
+  - component: {fileID: 2060330922}
+  m_Layer: 0
+  m_Name: toilet (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2060330922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060330921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is a bathroom
+  - what do you want, it's not interesting.
+  messageIndex: 0
+--- !u!61 &2060330923
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060330921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &2060330924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060330921}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 8.587, y: 16.53, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &2082763493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082763496}
+  - component: {fileID: 2082763495}
+  - component: {fileID: 2082763494}
+  m_Layer: 0
+  m_Name: backdoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2082763494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082763493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This a secret backdoor
+  - You have no reason to use this door since you can go around to the front.
+  messageIndex: 0
+--- !u!61 &2082763495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082763493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &2082763496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082763493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.57, y: 21.2, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2146381581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2146381584}
+  - component: {fileID: 2146381583}
+  - component: {fileID: 2146381582}
+  m_Layer: 0
+  m_Name: toilet (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2146381582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146381581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c890c01c6f3048b9b1e3fd28acc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  program: none
+  scene: 0
+  messages1: []
+  idleMessages:
+  - This is a bathroom
+  - what do you want, it's not interesting.
+  messageIndex: 0
+--- !u!61 &2146381583
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146381581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.282372, y: -0.0064177513}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.435256, y: 1.3208771}
+  m_EdgeRadius: 0
+--- !u!4 &2146381584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146381581}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 7.279, y: 16.53, z: -0.33251354}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}

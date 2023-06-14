@@ -400,6 +400,7 @@
 "Assets/Scripts/MainGame/CameraController.cs"
 "Assets/Scripts/MainGame/InteractionManager.cs"
 "Assets/Scripts/MainGame/Introduction.cs"
+"Assets/Scripts/MainGame/MenuManager.cs"
 "Assets/Scripts/MainGame/PlayerController.cs"
 "Assets/Scripts/MainGame/TextBehaviour.cs"
 "Assets/Scripts/PC_Servicing/Tile.cs"
