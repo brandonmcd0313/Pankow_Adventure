@@ -9,6 +9,7 @@ TagManager:
   - Prompt
   - Tile
   - TileR
+  - EndGameBox
   layers:
   - Default
   - TransparentFX

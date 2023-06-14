@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EndingGame : MonoBehaviour
 {
+    public string className;
     public float possible, score, grade;
     public GameObject cover, paper; bool gameEnded;
     public AudioSource aud;
@@ -37,7 +39,14 @@ public class EndingGame : MonoBehaviour
     {
 
         gameEnded = true;
+        //add score to reportcard
+        int classIndex = Array.IndexOf(ReportCardManager.classList, className);
 
+        if (classIndex != -1)
+        {
+            // Assign the score to the corresponding index in the scoreList
+            ReportCardManager.scoreList[classIndex] = (int) grade;
+        }
         cover = Instantiate(cover);
         paper = Instantiate(paper);
         exitText = paper.transform.GetChild(0).GetComponent<TextMeshPro>();
@@ -88,6 +97,8 @@ public class EndingGame : MonoBehaviour
         }
 
         Time.timeScale = 0;
+        
+        
 
     }
 }

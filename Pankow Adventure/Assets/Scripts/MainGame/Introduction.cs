@@ -8,9 +8,12 @@ public class Introduction : MonoBehaviour
     //TODO: make this inroduction more thematic
     private string[] intro = new string[]
     {
-        "hi welcome to the game",
-        "space or top left button to interact",
-        "wasd or left joystick to move"
+        "Hello, Welcome To Pankow!",
+        "You are part of the " + PlayerController.program + " program.",
+        "Travel the school using WASD controls and find your classes.",
+        "You can find your class list/ report card by pressing R",
+        "Press the SPACE bar to skip dialogue",
+        "When you are done with all your classes you can leave!"
     };
    
     // Start is called before the first frame update

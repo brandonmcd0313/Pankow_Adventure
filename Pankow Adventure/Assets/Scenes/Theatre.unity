@@ -139,6 +139,10 @@ PrefabInstance:
       value: Your speech was SCORE% accurate!/nAfter accounting for accuracy and
         furthermore considering your presentation, your grade is GRADE%!
       objectReference: {fileID: 0}
+    - target: {fileID: 2087418388760175391, guid: cd8041705fe87a14d8a9fa80a3a29487, type: 3}
+      propertyPath: className
+      value: Theatre Acting
+      objectReference: {fileID: 0}
     - target: {fileID: 7673058297608951804, guid: cd8041705fe87a14d8a9fa80a3a29487, type: 3}
       propertyPath: m_RootOrder
       value: 4
