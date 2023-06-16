@@ -17,6 +17,9 @@ public class InputManager : MonoBehaviour
     public bool InfiniteRandomModeForFun = false;
     private void Start()
     {
+        //ficus cursor and stuff
+        Cursor.lockState = CursorLockMode.Locked;
+
         end = GameObject.Find("EndGame");
 
         if (InfiniteRandomModeForFun)
@@ -134,7 +137,7 @@ public class InputManager : MonoBehaviour
                 yield return null;
             }
            
-            if (Input.GetKeyDown(p) && !hit && current.transform.position.y < 2f && current.transform.position.y > -2f)
+            if (Input.GetKey(p) && !hit && current.transform.position.y < 2f && current.transform.position.y > -2f)
             {
                 print("got" + current);
                 hit = true;

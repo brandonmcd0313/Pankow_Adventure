@@ -88,7 +88,7 @@ public class ReportCardManager : MonoBehaviour
             if(s == -1)
             {
 
-                scores.text += "\n\n\n";
+                scores.text += "\n\n";
 
             }
             else
@@ -105,7 +105,7 @@ public class ReportCardManager : MonoBehaviour
             if (s == -1)
             {
 
-                grades.text += "\n\n\n";
+                grades.text += "\n\n";
 
             }
             else
@@ -117,9 +117,9 @@ public class ReportCardManager : MonoBehaviour
         grades.enabled = true;
 
         //if none of the grades are -1
-        if(Array.IndexOf(scoreList, -1) != -1)
+        if(Array.IndexOf(scoreList, -1) == -1)
         {
-            blocker.GetComponent<Collider2D>().isTrigger = true;
+            blocker.GetComponent<BoxCollider2D>().isTrigger = true;
         }
                 
     }

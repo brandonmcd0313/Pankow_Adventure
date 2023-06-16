@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpForce: 42
+  jumpForce: 88
   j: {fileID: 0}
   facingRight: 1
   d:

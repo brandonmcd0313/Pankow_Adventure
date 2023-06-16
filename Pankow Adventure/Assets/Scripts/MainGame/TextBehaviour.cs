@@ -14,27 +14,28 @@ public class TextBehaviour : MonoBehaviour
     
 
     
-    public static GameObject textBox;
+    public GameObject textBoxGO;
+    Image textBox;
     static Text text;
     Boolean isPrinting = false;
    Boolean ui = false;
     static TextBehaviour instance;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        
-        
-        textBox = GameObject.Find("TextBox");
+        //set instance to this
+        instance = this;
+
+        textBox = textBoxGO.GetComponent<Image>();
+        print(textBox);
         //disable textbox at start
-        textBox.SetActive(false);
+        textBox.enabled = false;
         //get text object of child of textbox
         text = textBox.transform.GetChild(0).GetComponent<Text>();
         //set text to empty
         text.text = "";
 
-        //set instance to this
-        instance = this;
-
+        
     }
 
     public static void setText(string s)
@@ -51,7 +52,7 @@ public class TextBehaviour : MonoBehaviour
         
         if (!ui && !isPrinting)
         {
-            textBox.SetActive(true);
+            textBox.enabled = true;
             ui = true;
         }
       //  print(message + "started");
@@ -105,7 +106,7 @@ public class TextBehaviour : MonoBehaviour
     {
         if (!isPrinting)
         {
-            textBox.SetActive(false);
+            textBox.enabled = false;
             text.text = "";
             ui = false;
             isPrinting = false;
@@ -114,7 +115,7 @@ public class TextBehaviour : MonoBehaviour
         {
             //stop all coroutines
             StopAllCoroutines();
-            textBox.SetActive(false);
+            textBox.enabled = false;
             text.text = "";
             ui = false;
             isPrinting = false;

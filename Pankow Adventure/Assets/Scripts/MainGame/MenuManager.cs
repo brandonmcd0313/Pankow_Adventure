@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         // Add listeners to each toggle
         CTE.onValueChanged.AddListener(OnToggleChanged);
         MST.onValueChanged.AddListener(OnToggleChanged);

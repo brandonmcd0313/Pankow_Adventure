@@ -53,7 +53,6 @@ public class TextInput : MonoBehaviour
                     else
                     {
                         
-                        score += 0.75f;
                        
                         input.color = Color.red;
                     }

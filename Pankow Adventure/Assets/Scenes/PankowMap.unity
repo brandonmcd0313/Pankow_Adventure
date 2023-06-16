@@ -155,7 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the school store!
   - It is currently closed, you should buy from Mr Sanborn anyway.
@@ -233,7 +236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the HVAC Room.
   - You are not taking HVAC.
@@ -496,7 +502,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Theatre English Classroom.
   - You are not taking English right now.
@@ -543,6 +552,134 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &56230898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56230900}
+  - component: {fileID: 56230899}
+  m_Layer: 0
+  m_Name: onlymp3.to - High School Hallway Ambience 2 Background Sound Effect -OMaHyZmbqdc-192k-1686740342
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &56230899
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56230898}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1636e38d650e35e42b0d89eb905a1fc4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.413
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &56230900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56230898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -58.26236, y: -7.6892533, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84856112
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +691,7 @@ GameObject:
   - component: {fileID: 84856114}
   - component: {fileID: 84856113}
   - component: {fileID: 84856115}
+  - component: {fileID: 84856116}
   m_Layer: 0
   m_Name: Report Card
   m_TagString: Untagged
@@ -629,7 +767,6 @@ Transform:
   - {fileID: 314138994}
   - {fileID: 2015961290}
   - {fileID: 377725122}
-  - {fileID: 1082147826}
   m_Father: {fileID: 0}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -651,6 +788,102 @@ MonoBehaviour:
   scores: {fileID: 2015961291}
   grades: {fileID: 377725123}
   blocker: {fileID: 501778692}
+--- !u!82 &84856116
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84856112}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1636e38d650e35e42b0d89eb905a1fc4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &111308823
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +916,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is a storage room.
   - It used to have vending machines but now it doesn't.
@@ -761,7 +997,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Computer Lab.
   - It is mainly used for NWEA testing, ew. Lucky that is not today!
@@ -839,7 +1078,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Horticulture Classroom.
   - You are not taking Horticulture.
@@ -917,7 +1159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is an expansion classroom.
   - It is mainly used for storage so you have no reason to be here.
@@ -1080,10 +1325,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1:
   - This is a classroom.
   - When this game was made this classroom was not being used.
   - But it will be used...
+  bell: {fileID: 0}
   idleMessages:
   - This room is still unused, maybe someday.
   messageIndex: 0
@@ -1160,7 +1408,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: PPA
   scene: 9
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Acting Classroom.
   - You are not taking any theatre classesTV Broadcast Media .
@@ -1489,9 +1740,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1:
   - This is the Office.
   - 'You have no reason to be in the office right now. '
+  bell: {fileID: 0}
   idleMessages:
   - You have no reason to be in the Office.
   - Now get to class, before you do have a reason to be here.
@@ -1744,7 +1998,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: CTE
   scene: 10
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the TV Broadcast Media Classroom.
   - You are not in TV Broadcast Media.
@@ -1822,7 +2079,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: MST
   scene: 8
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Game Design Classroom.
   - You are not taking Game Design.
@@ -1938,6 +2198,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2024,6 +2285,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1880324348}
+--- !u!82 &519420034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 99
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &622750272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2413,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Sports Medicine Classroom.
   - You are not in Sports Medicine.You are not in
@@ -2134,7 +2494,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: MST
   scene: 2
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Alegbra Classroom.
   - You are not taking Alegbra.
@@ -2212,7 +2575,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Health Occupations Classroom.
   - You are not taking Health Occupations.
@@ -2290,7 +2656,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Physics Classroom.
   - You are not taking Physics.
@@ -2368,7 +2737,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Geometry Classroom.
   - You are not taking Geometry.
@@ -2443,6 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5f5a93992865f48b27644bf98ff7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textBoxGO: {fileID: 312067009}
 --- !u!4 &761019398
 Transform:
   m_ObjectHideFlags: 0
@@ -2490,7 +2863,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is a closet.
   - Or maybe more. I don't know.
@@ -2568,7 +2944,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the entrance to the Counsling Office
   - 'Your schedule is perfect for you so you have no reason to enter. '
@@ -2646,7 +3025,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Graphic Arts and Design Classroom.
   - You are not taking this class.
@@ -2724,7 +3106,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: CTE
   scene: 6
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Early Childhood Devolpment Classroom.
   - You are not in Early Childhood Devolpment.
@@ -2802,7 +3187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Biology Classroom.
   - You are not taking Biology.
@@ -2880,7 +3268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Cognitively Impaired Classroom.
   - You are not in the Cognitively Impaired program.
@@ -2926,181 +3317,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &1082147825
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082147826}
-  - component: {fileID: 1082147828}
-  - component: {fileID: 1082147827}
-  m_Layer: 0
-  m_Name: Grade (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1082147826
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082147825}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 84856114}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.599718, y: -10.699913}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1082147827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082147825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Grade
-
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3f336817988a84f4aaaadd9e549f6f93, type: 2}
-  m_sharedMaterial: {fileID: 3760599751441319226, guid: 3f336817988a84f4aaaadd9e549f6f93, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4279637526
-  m_fontColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0.67887974, y: 0, z: 11.955209, w: -37.942142}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1082147828}
-  m_maskType: 0
---- !u!23 &1082147828
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082147825}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 3760599751441319226, guid: 3f336817988a84f4aaaadd9e549f6f93, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1496941295
-  m_SortingLayer: 1
-  m_SortingOrder: 4
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1096925916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3524,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Calculus Classroom.
   - You are not taking Calculus.
@@ -3386,7 +3605,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is an addiontal door to the acting room.
   - It is locked so you should use the other door
@@ -3464,7 +3686,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is an addiontal door to the acting room.
   - It is locked so you should use the other door
@@ -3542,7 +3767,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is an addiontal door to the acting room.
   - It is locked so you should use the other door
@@ -3620,7 +3848,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is an unused classroom.
   - Maybe someday it will be used again.
@@ -3698,7 +3929,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Criminal Investigations Classroom.
   - You are not taking Criminal Investigations.
@@ -3776,7 +4010,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the CAD Classroom.
   - You are not taking CAD.
@@ -3854,7 +4091,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Sports Medicine Classroom.
   - You are not in Sports Medicine.You are not in
@@ -4545,7 +4785,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Teacher Lounge.
   - You are not a teacher so you can't go in there.
@@ -4624,7 +4867,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Cognitively Impaired Classroom.
   - You are not in the Cognitively Impaired program.
@@ -4783,7 +5029,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Sports Medicine Classroom.
   - You are not in Sports Medicine.You are not in
@@ -4861,7 +5110,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: MST
   scene: 3
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Chemistry Classroom.
   - You are not taking Chemistry.
@@ -4939,9 +5191,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1:
   - This is the room attached to the other unused room.
   - The future use of this room remains mysterious.
+  bell: {fileID: 0}
   idleMessages:
   - Still empty, how mysterious
   messageIndex: 0
@@ -5082,7 +5337,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 6325968058642766844, guid: 84f23c940488b634894729c237b68713, type: 3}
+  cover: {fileID: 3156150804097730403, guid: a3b31ed1f0155a247a0a83e40cfe0763, type: 3}
   messages1: []
+  bell: {fileID: 8300000, guid: a2bf898fe71a19247af0cd498cfe93a7, type: 3}
   idleMessages: []
   messageIndex: 0
 --- !u!1 &1707907174
@@ -5117,7 +5375,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: CTE
   scene: 4
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Culinary Classroom.
   - You are not in Culinary.
@@ -5195,7 +5456,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: MST
   scene: 7
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the PC Servicing Classroom.
   - You are not taking PC Servicing.
@@ -5273,7 +5537,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Auto Tech Lab.
   - You are not in auto tech so you have no reason to be here.
@@ -5351,7 +5618,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Auto Tech Lab.
   - You are not in auto tech so you have no reason to be here.
@@ -5429,7 +5699,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Auto Tech Classroom.
   - You are not taking Auto Tech .
@@ -5578,7 +5851,7 @@ Transform:
   m_GameObject: {fileID: 1880324348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.04, y: 4.35, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5690,7 +5963,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: PPA
   scene: 5
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Dance Classroom.
   - You are not in Dance.
@@ -5768,7 +6044,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is the Auto Tech Lab.
   - You are not in auto tech so you have no reason to be here.
@@ -5846,7 +6125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is a bathroom
   - what do you want, it's not interesting.
@@ -6099,7 +6381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is a bathroom
   - what do you want, it's not interesting.
@@ -6177,7 +6462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This a secret backdoor
   - You have no reason to use this door since you can go around to the front.
@@ -6255,7 +6543,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   program: none
   scene: 0
+  paper: {fileID: 0}
+  cover: {fileID: 0}
   messages1: []
+  bell: {fileID: 0}
   idleMessages:
   - This is a bathroom
   - what do you want, it's not interesting.
